@@ -1,11 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <h1>Add new book</h1>
+          <input class="input" type="text" id="title" placeholder="Title" required="" maxlength="100">
+          <input class="input" type="text" id="author" placeholder="Author" required="" maxlength="100">
+          <input class="input" type="number" id="pages" placeholder="Pages" required="" max="10000">
+          <div class="is-read">
+            <label for="is-read">Have you read it?</label>
+            <input class="checkbox" type="checkbox" id="isRead">
+          </div>
+        </div>
+    </div>
+    <header>
+      <div class="header-text"><i class="fa-solid fa-book"></i> Library</div>
+    </header>
+    <div class="add-book-button-container">
+      <button id="add-book-button"><i class="fa-solid fa-plus"></i> Add Book</button>
+    </div>
+    <div class="library-container">
+      <div class="library-content">
+            <table>
+                <tr>
+                  <th>Title</th>
+                  <th>Author</th>
+                  <th>Page Count</th>
+                  <th>Status</th>
+                </tr>
+                <tr>
+                    <td>Nineteen Eighty-Four</td>
+                    <td>George Orwell</td>
+                    <td>328</td>
+                    <td>Read</td>
+                  </tr>
+                  <tr>
+                    <td>The Great Gatsby</td>
+                    <td>F. Scott Fitzgerald</td>
+                    <td>208</td>
+                    <td>Read</td>
+                  </tr>
+                  <tr>
+                    <td>Fahrenheit 451</td>
+                    <td>Ray Bradbury</td>
+                    <td>272</td>
+                    <td>Read</td>
+                  </tr>
+                </table>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
 </html>
