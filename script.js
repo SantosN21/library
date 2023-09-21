@@ -1,10 +1,6 @@
 const modalObject = document.getElementById("form-container");
 
-const myLibrary = [
-  new Book("Nineteen Eighter-Four", "George Orwell", 328, true),
-  new Book("The Great Gatsby", "F. Scott Fitzgerald", 208, true),
-  new Book("Fahrenheit 451", "Ray Bradbury", 272, false),
-];
+
 
 class Book {
   constructor(title, author, pages, read) {
@@ -14,6 +10,12 @@ class Book {
   this.read = read ? "Read" : "Not Read";
   }
 }
+
+const myLibrary = [
+  new Book("Nineteen Eighter-Four", "George Orwell", 328, true),
+  new Book("The Great Gatsby", "F. Scott Fitzgerald", 208, true),
+  new Book("Fahrenheit 451", "Ray Bradbury", 272, false),
+];
 
 const toggleReadStatus = (book, buttonElement) => {
   // Toggle the book's status in the myLibrary array
