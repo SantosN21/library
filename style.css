@@ -3,6 +3,7 @@
   font-family: "Roboto", sans-serif;
   margin: 0;
   color: white;
+  user-select: none;
 }
 body {
     background-color: #0d1117;
@@ -17,18 +18,21 @@ header {
     align-items: center;
     padding: 1rem;
 }
-.add-book-button-container {
+.new-book-btn-container {
   display: flex;
   justify-content: center;
   padding: 1rem;
   font-size: 1.5rem;
 }
-#add-book-button {
+#new-book-btn {
   border: white solid .1rem;
   padding: 1rem;
   border-radius: .5rem;
+  background: none;
+  color: inherit;
+  font: inherit;
 }
-#add-book-button:hover {
+#new-book-btn:hover {
   cursor: pointer;
   background-color: #44444477;
 }
@@ -53,12 +57,11 @@ tr:nth-child(even) {
 .fa-solid.fa-plus {
   transition: transform 0.5s ease 0s;
 }
-.modal {
+#form-container {
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 200px;
-  top: 0;
+  padding-top: 50px;
   left: 0;
   align-items: center;
   width: 100%;
@@ -68,7 +71,7 @@ tr:nth-child(even) {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modal-content {
+#new-book-form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -77,20 +80,12 @@ tr:nth-child(even) {
   align-items: center;
   padding: 2rem;
   border: .1rem  gray solid;
-  width: 25%;
+  width: 20%;
   border-radius: 1rem;
   height: 35%;
 }
 
-button, input[type="submit"], input[type="reset"] {
-	background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
-}
+
 input {
   color: #000000;
   border: .1rem  gray solid;
@@ -110,3 +105,66 @@ input {
   margin-top: 4px;
   accent-color: white;
 }
+input:focus {
+  outline: none;
+  border: none;
+}
+
+.btn {
+  padding: .7rem;
+  border-radius: .5rem;
+  background-color: #238636;
+  color: inherit;
+  cursor: pointer;
+  border: none;
+  font: inherit;
+  width: 45%;
+}
+
+.btn:hover {
+  background-color: #2aac44;
+}
+
+.checkbox-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.readContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.read-status {
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.read {
+  background-color: green;
+  color: white;
+}
+
+.not-read {
+  background-color: red;
+  color: white;
+}
+
+.readButton {
+  cursor: pointer;
+}
+
+.table {
+  table-layout: fixed;
+  width: 100%;  
+}
+
+.removeContainer {
+  text-align: center;
+}
+.removeButton {
+  cursor: pointer;
+}
+
+
+
