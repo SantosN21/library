@@ -166,5 +166,11 @@ input:focus {
   cursor: pointer;
 }
 
+.removeButton:active {
+  transform: translateY(2px);
+}
 
+.fa-solid.fa-trash:active{
+  transform: translateY(2px);
+}
 

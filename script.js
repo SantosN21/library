@@ -6,11 +6,13 @@ const myLibrary = [
   new Book("Fahrenheit 451", "Ray Bradbury", 272, false),
 ];
 
-function Book(title, author, pages, read) {
+class Book {
+  constructor(title, author, pages, read) {
   this.title = title;
   this.author = author;
   this.pages = pages;
   this.read = read ? "Read" : "Not Read";
+  }
 }
 
 const toggleReadStatus = (book, buttonElement) => {
